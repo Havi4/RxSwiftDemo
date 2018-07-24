@@ -51,6 +51,17 @@ class TestDemo {
     }
     
     func testDemo() {
+        let nameSpace = NameSpace()
+        print(nameSpace.hrx.base)
+    }
+}
+
+class NameSpace: NSObject {
+    override init() {
         
+    }
+    
+    func nameSpace() {
+        let a: String?
     }
 }

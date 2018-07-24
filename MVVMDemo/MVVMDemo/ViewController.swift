@@ -44,7 +44,6 @@ class ViewController: UIViewController {
         tableView.rx
             .modelSelected(String.self).subscribe(onNext: {
                 print("tap index: \($0)")
-//                let viewClass = NSClassFromString($0) as? UIViewController
                 let viewController = DayOneController()
                 self.navigationController?.pushViewController(viewController, animated: true)
             })

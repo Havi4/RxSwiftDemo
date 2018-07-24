@@ -19,16 +19,16 @@ public struct HIReactive<Base> {
 public protocol HIReactiveCompatible {
     associatedtype HICompatibleType
     
-    static var rx: HIReactive<HICompatibleType>.Type { get set }
+    static var hrx: HIReactive<HICompatibleType>.Type { get set }
     
-    var rx: HIReactive<HICompatibleType> { get set }
+    var hrx: HIReactive<HICompatibleType> { get set }
     
     
 }
 
 extension HIReactiveCompatible {
     
-    public static var rx: HIReactive<Self>.Type {
+    public static var hrx: HIReactive<Self>.Type {
         
         get {
             return HIReactive<Self>.self
@@ -39,7 +39,7 @@ extension HIReactiveCompatible {
         }
     }
     
-    public var rx: HIReactive<Self> {
+    public var hrx: HIReactive<Self> {
         get {
             return HIReactive(self)
         }
